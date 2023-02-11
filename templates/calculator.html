@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <title>Prediction Calculator</title>
+        <style>
+            *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("{{url_for('static',filename='image7.jpg')}}");
+    background-size: 100%;
+    background-position: -400px 0px;
+}
+div.main{
+    width: 400px;
+    margin: 100px auto 0px auto;
+}
+h2{
+    text-align: center;
+    padding: 20px;
+    font-family: sans-serif;
+}
+div.register{
+    background-color:rgba(0,0,0,0.5);
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px soid rgba(255,255,255,0.3);
+    box-shadow: 3px 2px 15px rgba(0,0,0,0.3);
+    color:#fff;
+
+}
+form#register{
+    margin:40px;
+}
+label{
+    font-family: sans-serif;
+    font-size: 18px;
+    font-style: italic;
+}
+input#name{
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline:0;
+    padding: 7px;
+    background-color: #fff;
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+}
+button#submit{
+    width: 200px;
+    padding: 7px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 600;
+    border:none;
+    border-radius: 3px;
+    background-color: rgba(250,100,0,0.8);
+    color:#fff;
+    cursor: pointer;
+    border: 1-x solid rgba(255,255,255,0.3);
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+
+}
+label,span,h2{
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+nav{
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+    padding: 0px 100px;
+    background-image: linear-gradient(#033747,#012733);
+}
+nav .logo p{
+    font-size: 30px;
+    font-weight: bold;
+    float: left;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+nav ul{
+    float:right;
+
+}
+nav li{
+    display: inline-block;
+}
+nav li a{
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 0px 30px;
+    color:white;
+    text-decoration: none;
+}
+nav li a:hover{
+    color:#ff8c69;
+    transition: all 0.4s ease 0s;
+}
+.content-items img{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+</style>
+    </head>
+    <body>
+        <div class="main">
+        <div class="register">
+            <h2>Check the Diabetes Here</h2>
+            <form action="/predict"method="post" id="register">
+                <label>Pregnencies :</label>
+                <br>
+                <input type="text" name="Pregnencies" id="preg" placeholder="Pregnencies">
+                <br><br>
+                <label>Glucose Level :</label>
+                <br>
+                <input type="text" name="Glucose Level" id="Gluc" placeholder="Glucose Level">
+                <br><br>
+                <label>Blood Pressure :</label>
+                <br>
+                <input type="text" name="Blood Pressure" id="pres" placeholder="Blood Pressure">
+                <br><br>
+                <label>Skin Thickness :</label>
+                <br>
+                <input type="text" name="Skin Thickness" id="skin" placeholder="Skin Thickness">
+                <br><br>
+                <label>Insulin :</label>
+                <br>
+                <input type="text" name="Insulin" id="insu" placeholder="Insulin">
+                <br><br>
+                <label>BMI :</label>
+                <br>
+                <input type="text" name="BMI" id="bmi" placeholder="BMI">
+                <br><br>
+                <label>Diabetes PF :</label>
+                <br>
+                <input type="text" name="Diabetes PF " id="PF" placeholder="Diabetes PF ">
+                <br><br>
+                <label>AGE :</label>
+                <br>
+                <input type="text" name="AGE " id="age" placeholder="AGE ">
+                <br><br>
+                <button type='submit' id="submit">Predict</button>
+
+            </form>
+        </div>
+        </div>
+    </body>
+</html>

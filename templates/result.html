@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>E-HOSPITAL</title>
+</head>
+<body>
+
+<h1><p style='text-align:center;'>Diabetes Prediction</p></h1>
+<h2>Results:</h2>
+{% if prediction == 1%}
+<h2 style="color:red;">Chances of having diabetes is more, please consult a Doctor</h2>
+<img src="{{url_for('static',filename='image13.jpg')}}">
+{% elif prediction == 0%}
+<h2 style="color:blue;">No Worries !!! You dont have Diabetes</h2>
+<img src="{{url_for('static',filename='image12.jpg')}}">
+{% endif %}
+
+</body>
+</html>
